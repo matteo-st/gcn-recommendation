@@ -1,0 +1,19 @@
+# dataset
+train_path: "ratings_train.npy"
+test_path: "ratings_test.npy"
+input_node_embedding: "one_hot"
+mode: 'train'
+
+# training
+in_channels: 32
+out_channels: 32
+epochs: 150
+lr: 0.01
+
+#monitoring
+profile: False
+
+#post-processing
+save_model: False
+round_output: True
+round_delta: 0.05
