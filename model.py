@@ -19,10 +19,6 @@ class GNNEncoder(nn.Module):
         # self.conv1 = GATConv((-1, -1), hidden_channels, heads=heads, concat=True, add_self_loops=False) # Multi-head
         # self.conv2 = GATConv((-1, -1), out_channels, heads=1, concat=False, add_self_loops=False)  # Single-head for simplicity
         
-        
-
-        #check dynconv : https://pytorch-geometric.readthedocs.io/en/latest/modules/nn.html#torch_geometric.nn.conv.DynamicEdgeConv
-        #self.conv1 = ...
 
 
         # print(dropout_rate)
