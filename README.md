@@ -59,11 +59,11 @@ The best performing model on the MovieLens 100k dataset achieved:
 
 ## Configuration
 Hyperparameters, such as learning rate, epochs, and dataset paths, can be adjusted in the `config.yml` file:
-```yaml
-lr: 0.01
-epochs: 100
-train_path: 'data/train.csv'
-test_path: 'data/test.csv'
-round_output: true
+   ```
+   lr: 0.01
+   epochs: 100
+   train_path: 'data/train.csv'
+   test_path: 'data/test.csv'
+   round_output: true
 
 **Note** : This `README.md` file has been generatd by an LLM.
