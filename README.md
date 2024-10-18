@@ -16,15 +16,19 @@ The task is to predict unobserved entries in the user-item matrix \( M \) by lea
 
 ### Model Architecture
 
-1. **Graph Encoder**: Uses a multi-layer **GCN** to learn embeddings \( U \) (for users) and \( V \) (for items) from the input data.
-   ```
-   H_i^{(l+1)} = σ ( Σ_{j ∈ N(i)} 1/sqrt(d_i * d_j) * H_j^{(l)} * W^{(l)} )
-   ```
+1. **Graph Encoder**: Uses a multi-layer **GCN** to learn embeddings $U$ (for users) and $V$ (for items) from the input data.
+
+   $$
+   H_i^{(l+1)} = \sigma \left( \sum_{j \in N(i)} \frac{1}{\sqrt{d_i d_j}} H_j^{(l)} W^{(l)} \right)
+   $$
+
 2. **Pairwise Bilinear Decoder**: Reconstructs the interaction matrix by predicting ratings based on user-item embeddings.
-   \[
+
+   $$
    \tilde{M}_{ij} = u_i^\top Q v_j
-   \]
-   where \( Q \) is a learnable parameter matrix.
+   $$
+
+   where $Q$ is a learnable parameter matrix.
 
 ## Results
 
